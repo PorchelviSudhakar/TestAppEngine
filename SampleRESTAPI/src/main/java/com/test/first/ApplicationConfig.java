@@ -1,16 +1,18 @@
 package com.test.first;
 
-import javax.ws.rs.ApplicationPath;
-
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
 
-
+// This Class is used to create singleton Object
 public class ApplicationConfig extends ResourceConfig {
     public ApplicationConfig() {
-    	System.out.println("Came into Application Config");
-        // this call has the same effect as
-        // jersey.config.server.provider.packages
-        // in the web.xml: it scans that packages for resources and providers. 
-        packages("com.test.first");
+    	System.out.println("Calling Application Config");
+        register(StudentResources.class);
+        register(new AbstractBinder() {
+            @Override
+            protected void configure() {
+            	bind(new StudentRepository()).to(StudentRepository.class);
+            }
+        });
     }
 }
