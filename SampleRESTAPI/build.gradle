@@ -26,6 +26,8 @@ dependencies {
          implementation 'com.google.guava:guava:21.0'
          testImplementation 'junit:junit:4.12'
          compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.25.1'
+         // https://mvnrepository.com/artifact/com.googlecode.objectify/objectify
+         compile group: 'com.googlecode.objectify', name: 'objectify', version: '4.1.3'
 }
 
 
