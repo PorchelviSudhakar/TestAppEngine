@@ -27,7 +27,7 @@ public class StudentResources {
 	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	public List<Student> getStudentList() {
 		// Fetching data like from the database
-		System.out.println("Coming inside getStudentList================");
+		System.out.println("Inside getStudentList================");
 		return studentrepo.getStudentList();
 	}
 
