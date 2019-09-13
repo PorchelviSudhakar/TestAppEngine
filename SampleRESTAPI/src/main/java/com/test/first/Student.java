@@ -1,12 +1,26 @@
 package com.test.first;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 
+@Entity
 public class Student {
 
+	@Id
 	private int id;
 	private String name;
 	private int mark;
+	
+	public Student() {
+		super();
+	}
+
+	public Student(int id, String name, int mark) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mark = mark;
+	}
 
 	public int getId() {
 		return id;

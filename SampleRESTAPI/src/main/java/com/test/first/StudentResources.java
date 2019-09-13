@@ -9,6 +9,10 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
+import com.googlecode.objectify.ObjectifyService;
+
+import static com.googlecode.objectify.ObjectifyService.ofy;
+
 @Path("student")
 public class StudentResources {
 
@@ -21,8 +25,9 @@ public class StudentResources {
 	@GET
 	@Path("getStudentList")
 	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	public List<Student> getStudentInformation() {
+	public List<Student> getStudentList() {
 		// Fetching data like from the database
+		
 		return studentrepo.getStudentList();
 	}
 
@@ -31,8 +36,15 @@ public class StudentResources {
 	@POST
 	@Path("getStudentWithId")
 	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
-	public Student getId(Student student) {
+	public Student getStudentWithId(Student student) {
 		// This method returns a student that matches with the particular id
 		return studentrepo.getStudent(student.getId());
+	}
+	
+	@POST
+	@Path("saveStudentInfo")
+	public void saveStudentInfo(Student student) {
+//		ObjectifyService.init();
+//		ofy().save().entity(new Student(student.getId(),student.getName(),student.getMark())).now();
 	}
 }
