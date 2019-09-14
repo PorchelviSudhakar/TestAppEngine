@@ -1,6 +1,5 @@
 package com.test.first;
 
-import java.awt.PageAttributes.MediaType;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -8,10 +7,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-
-import com.googlecode.objectify.ObjectifyService;
-
-import static com.googlecode.objectify.ObjectifyService.ofy;
 
 @Path("student")
 public class StudentResources {
@@ -41,10 +36,5 @@ public class StudentResources {
 		return studentrepo.getStudent(student.getId());
 	}
 	
-	@POST
-	@Path("saveStudentInfo")
-	public void saveStudentInfo(Student student) {
-		ObjectifyService.init();
-		ObjectifyService.ofy().save().entity(new Student(student.getId(),student.getName(),student.getMark())).now();
-	}
+
 }
