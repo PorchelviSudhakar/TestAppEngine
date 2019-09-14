@@ -8,7 +8,7 @@ import java.util.List;
 public class StudentRepository {
 	List<Student> studentList;
 
-	StudentRepository() {
+	public StudentRepository() {
 		Student student = new Student();
 		student.setName("student1");
 		student.setMark(80);
