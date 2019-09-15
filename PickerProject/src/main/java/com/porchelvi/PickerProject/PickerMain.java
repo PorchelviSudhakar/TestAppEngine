@@ -19,7 +19,7 @@ public class PickerMain {
 
 		// Input to create list of objects
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the Projects to add into the list==============");
+		System.out.println("Enter the Projects to add into the list ");
 		String[] nk = scan.nextLine().split(" ");
 		System.out.println("Added Projects Are: ");
 		for (String string : nk) {
@@ -33,11 +33,7 @@ public class PickerMain {
 		String picker = pickerScanner.nextLine();
 
 		if (picker.equals("A")) {
-			Scanner projectRetrieveScanner = new Scanner(System.in);
-			System.out.println("Please enter the project to retrieve============");
-			String desiredProject = projectRetrieveScanner.nextLine();
-			new SerialPicker(list, desiredProject);
-			projectRetrieveScanner.close();
+			new SerialPicker(list);
 		} else {
 			new RandomPicker(list);
 		}
