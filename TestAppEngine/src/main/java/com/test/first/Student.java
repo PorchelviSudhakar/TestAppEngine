@@ -3,6 +3,8 @@ package com.test.first;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
+/*In case of JPA this class will be treated as an entity*/
+
 @Entity
 public class Student {
 
@@ -10,7 +12,7 @@ public class Student {
 	private int id;
 	private String name;
 	private int mark;
-	
+
 	public Student() {
 		super();
 	}
