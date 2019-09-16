@@ -3,11 +3,13 @@ package com.test.first;
 import java.util.Arrays;
 import java.util.List;
 
-
-
 public class StudentRepository {
 	List<Student> studentList;
 
+	/*
+	 * Instead of customizing data from the database values were customized hard
+	 * coded
+	 */
 	public StudentRepository() {
 		Student student = new Student();
 		student.setName("student1");
@@ -21,14 +23,16 @@ public class StudentRepository {
 		studentList = Arrays.asList(student, student1);
 	}
 
+	/* This Method returns student list */
 	public List<Student> getStudentList() {
 		return studentList;
 	}
 
+	/* This method based on the input it returns the student data */
 	public Student getStudent(int id) {
-		
+
 		for (Student student : studentList) {
-			if(student.getId()==id) {
+			if (student.getId() == id) {
 				return student;
 			}
 		}
