@@ -4,28 +4,28 @@ TestAppEngine creates a simple JAX-RS(Jersey) REST Interface logic which accepts
 based on the input data and provides JSON Data as output.
 
 ## Prerequisites
-Eclipse IDE/IntelliJ IDE
-App Engine JAVA SDK
-Install Gradle
-JAVA 1.8
+1. Eclipse IDE/IntelliJ IDE
+2. App Engine JAVA SDK
+3. Install Gradle
+3. JAVA 1.8
 
 ## Installing
-1.Install Gradle into the system from https://gradle.org/install/#manually
-2.Install App Engine JAVA SDK From https://cloud.google.com/appengine/docs/java/download
+1. Install Gradle into the system from https://gradle.org/install/#manually
+2. Install App Engine JAVA SDK From https://cloud.google.com/appengine/docs/java/download
 
 
 ## Gradle Project Creation
 1. Install Build Gradle Integration plugin from Eclipse Market Place so that it can support the Gradle project.
-2.Create a new Gradle project by File->New->Others->Gradle Project
+2. Create a new Gradle project by File->New->Others->Gradle Project
 
 ## Converting Gradle Project to support App Engine
-1.In Eclipse Right Click->Properties->Project Facets->check the following
+1. In Eclipse Right Click->Properties->Project Facets->check the following
    1.1 App Engine Java Standard Environment JRE8
    1.2 Dynamic Web Module 3.0
    1.3 Java 1.8
    1.4 JAX-RS(REST Web Services) 1.1
 
-Apply the above configuration in the project.
+   Apply the above configuration in the project.
 2. The above configurations create an src->main->webapp folder in the project and generate an appengine-web.xml file in the project.
 3. Remove Default Library.java and LibraryTest.java classes from the Gradle Project.  
 
@@ -42,7 +42,7 @@ Note: The above configurations can make the Gradle project to deploy in App Engi
 2. Added the dependencies below to support MediaType.APPLICATION_JSON
    compile group: 'com.fasterxml.jackson.jaxrs', name: 'jackson-jaxrs-json-provider', version: '2.7.9'
    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.25.1'
-3.Included dependencies related to App Engine so that this projet can be deployed in App Engine Server.
+3. Included dependencies related to App Engine so that this projet can be deployed in App Engine Server.
 
 ## Project Description
 1. In this project Dependency Injection configurations were done in ApplicationConfig.java class
