@@ -20,10 +20,10 @@ based on the input data and provides JSON Data as output.
 
 ## Converting Gradle Project to support App Engine
 1. In Eclipse Right Click->Properties->Project Facets->check the following
-   1.1 App Engine Java Standard Environment JRE8
-   1.2 Dynamic Web Module 3.0
-   1.3 Java 1.8
-   1.4 JAX-RS(REST Web Services) 1.1
+1.1 App Engine Java Standard Environment JRE8
+1.2 Dynamic Web Module 3.0
+1.3 Java 1.8
+1.4 JAX-RS(REST Web Services) 1.1
 
    Apply the above configuration in the project.
 2. The above configurations create an src->main->webapp folder in the project and generate an appengine-web.xml file in the project.
