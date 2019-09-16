@@ -1,7 +1,7 @@
 ## SampleRESTAPI
 
 SampleRESTAPI creates a simple JAX-RS(Jersey) REST Interface logic which accepts JSON Data as input and performs some operation 
-based on the input data and provides JSON Data as output.
+based on the input data and provides JSON Data as output and uses Tomcat Server.
 
 ## Prerequisites
 1. Eclipse IDE/IntelliJ IDE
