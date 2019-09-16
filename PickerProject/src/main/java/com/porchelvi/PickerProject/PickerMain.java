@@ -7,7 +7,8 @@ import java.util.Scanner;
 import projects.Projects;
 
 /**
- * Hello world!
+ * This class takes the provided input and based on the selection of picker it
+ * will navigate to that logic
  *
  */
 public class PickerMain {
