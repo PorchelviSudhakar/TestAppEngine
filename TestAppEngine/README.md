@@ -1,24 +1,24 @@
-##TestAppEngine
+## TestAppEngine
 
 TestAppEngine creates a simple JAX-RS(Jersey) REST Interface logic which accepts JSON Data as input and performs some operation 
 based on the input data and provides JSON Data as output.
 
-##Prerequisites
+## Prerequisites
 Eclipse IDE/IntelliJ IDE
 App Engine JAVA SDK
 Install Gradle
 JAVA 1.8
 
-##Installing
+## Installing
 1.Install Gradle into the system from https://gradle.org/install/#manually
 2.Install App Engine JAVA SDK From https://cloud.google.com/appengine/docs/java/download
 
 
-##Gradle Project Creation
+## Gradle Project Creation
 1. Install Build Gradle Integration plugin from Eclipse Market Place so that it can support the Gradle project.
 2.Create a new Gradle project by File->New->Others->Gradle Project
 
-##Converting Gradle Project to support App Engine
+## Converting Gradle Project to support App Engine
 1.In Eclipse Right Click->Properties->Project Facets->check the following
    1.1 App Engine Java Standard Environment JRE8
    1.2 Dynamic Web Module 3.0
@@ -31,12 +31,12 @@ Apply the above configuration in the project.
 
 Note: The above configurations can make the Gradle project to deploy in App Engine Server.
 
-##How to Create JAX-RS(Jersey) REST Interface:
+## How to Create JAX-RS(Jersey) REST Interface:
 1. To include Jersey features in the project add the dependency below in build.gradle
   
   compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
 
-##Dependencies required for this project
+## Dependencies required for this project
 
 1. Included Objectify dependency
 2. Added the dependencies below to support MediaType.APPLICATION_JSON
@@ -44,7 +44,7 @@ Note: The above configurations can make the Gradle project to deploy in App Engi
    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.25.1'
 3.Included dependencies related to App Engine so that this projet can be deployed in App Engine Server.
 
-##Project Description
+## Project Description
 1. In this project Dependency Injection configurations were done in ApplicationConfig.java class
    where singleton instance of StudentRepository class was created.
 2. Myresource.java is a sample test class to check whether the particular URL is loading or not
@@ -57,7 +57,7 @@ Note: The above configurations can make the Gradle project to deploy in App Engi
 6. On invoking this URL http://localhost:8080/webapi/student/getStudentList it returns the total number of students in the student repository 
 7. On invoking this URL http://localhost:8080/webapi/student/getStudentwithId it returns the particular student from the student repository.
 
-##Deploying this project in App Engine
+## Deploying this project in App Engine
 1. In Google Cloud SDK Shell enter the following commands
       1.1 gcloud init
       1.2 gcloud auth application-default login (This command makes you to login with your account)
