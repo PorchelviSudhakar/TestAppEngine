@@ -58,7 +58,7 @@ Note: The above configurations can make the Gradle project to deploy in App Engi
 7. On invoking this URL http://localhost:8080/webapi/student/getStudentwithId it returns the particular student from the student repository.
 
 ## Deploying this project in App Engine
-In Google Cloud SDK Shell enter the following commands
+## In Google Cloud SDK Shell enter the following commands:
       1. gcloud init
       2. gcloud auth application-default login (This command makes you to login with your account)
       3. gradle appengineRun(This command will make you run the application)
