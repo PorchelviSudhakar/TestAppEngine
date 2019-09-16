@@ -1,9 +1,7 @@
 package projects;
 
+// Simple POJO Class used to persist name variable
 public class Projects {
-	
-	
-
 	String name;
 	
 	public Projects(String name){
