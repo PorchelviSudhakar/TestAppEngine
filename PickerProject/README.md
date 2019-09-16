@@ -1,5 +1,7 @@
 ## Picker Project:
-In this project based on the selection of Serial Picker or Random Picker desired project from a list of projects is retrieved
+In this project based on the selection of Serial Picker or Random Picker desired logic will be executed
+SerialPicker: This Logic returns the next element in the list, when it reaches the end it starts returning the first element
+RandomPicker: This Logic returns random element from the list.
 
 ## Prerequisites:
 Eclipse IDE/IntelliJ IDE
