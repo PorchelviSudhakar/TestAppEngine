@@ -8,6 +8,7 @@ based on the input data and provides JSON Data as output.
 2. App Engine JAVA SDK
 3. Install Gradle
 3. JAVA 1.8
+4. Postman is used for providing client side inputs.
 
 ## Installing
 1. Install Gradle into the system from https://gradle.org/install/#manually
